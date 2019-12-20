@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 
 import { setWords } from "../../services/store/actions"
 
-import './Numpad.css'
+import './Numpad.scss'
 
 const containsOnlyNumbers = (str) => /^\d+$/.test(str)
 
@@ -49,24 +49,24 @@ const Numpad = () => {
         <input className="input" placeholder="Type or use the numpad" style={{flex: 1}} onChange={e => onChange(e.target.value)} value={input} onKeyDown={handleKeyDown}/>
         <button className="button button-inverted" onClick={send} style={{width: '80px', }}>Send</button>
       </div>
-      <div>
+      <div style={{display: 'flex'}}>
         <button className="button" onClick={() => onClick(1)}>1 (,.?!)</button>
         <button className="button" onClick={() => onClick(2)}>2 (ABC)</button>
         <button className="button" onClick={() => onClick(3)}>3 (DEF)</button>
       </div>
-      <div>
+      <div style={{display: 'flex'}}>
         <button className="button" onClick={() => onClick(4)}>4 (GHI)</button>
         <button className="button" onClick={() => onClick(5)}>5 (JKL)</button>
         <button className="button" onClick={() => onClick(6)}>6 (MNO)</button>
       </div>
-      <div>
+      <div style={{display: 'flex'}}>
         <button className="button" onClick={() => onClick(7)}>7 (PQRS)</button>
         <button className="button" onClick={() => onClick(8)}>8 (TUV)</button>
         <button className="button" onClick={() => onClick(9)}>9 (WXYZ)</button>
       </div>
-      <div>
+      <div style={{display: 'flex'}}>
         <button className="button" onClick={backspace}>Backspace</button>
-        <button className="button" onClick={clear} disabled>&nbsp;</button>
+        <button className="button" style={{cursor: 'auto'}} onClick={clear} disabled>&nbsp;</button>
         <button className="button" onClick={clear}>Clear</button>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 import WordList from './WordList'
 
-import './Output.css'
+import './Output.scss'
 
 const Output = () => {
 
@@ -13,10 +13,13 @@ const Output = () => {
   }))
 
   return (
-    <div className="output-container">
-      <div className="output-title">Output</div>
-      <div className="output-wordlist"><WordList words={words}/>&nbsp;</div>
-    </div>
+    <>
+      <div className="output-container">
+        <div className="output-title">Output</div>
+        <div className="output-wordlist"><WordList words={words}/>&nbsp;</div>
+      </div>
+      <div style={{padding: '14px 4px'}}>The wordlist only contains the words: <br/> apple, banana, pear, peach, mango <br/> &amp; grapes</div>
+    </>
   );
 }
 

@@ -1,0 +1,10 @@
+@import '../../theme.scss';
+
+.output-word {
+  display: inline-block;
+  color: white;
+  margin: 4px;
+  background-color: $primary-color;
+  padding: 4px 8px;
+  border-radius: 4px;
+}

@@ -1,8 +1,10 @@
+@import '../../theme.scss';
+
 .button {
-  width: 100px;
-  background-color:#eeeeee50;
+  flex: 1;
+  background-color: white;
   border: none;
-  box-shadow: 2px 2px #22222250;
+  box-shadow: 2px 2px $shadow-color;
   padding: 4px;
   border-radius: 4px;
   margin: 4px;
@@ -10,7 +12,7 @@
 }
 
 .button-inverted {
-  background-color: #3cac48;
+  background-color: $primary-color;
   color: white;
 }
 
@@ -26,7 +28,7 @@
 }
 
 .numpad-container {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px $shadow-color;
   margin-top: 20px;
-  border: 1px #eee solid;
+  border: 1px white solid;
 }

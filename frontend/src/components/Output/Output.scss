@@ -1,12 +1,14 @@
+@import '../../theme.scss';
+
 .output-container {
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px $shadow-color;
   margin-top: 20px;
   text-align: center;
 }
 
 .output-title {
   padding: 4px;
-  background-color: #3cac48;
+  background-color: $primary-color;
   color: white;
 }
 
