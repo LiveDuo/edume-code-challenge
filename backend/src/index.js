@@ -1,3 +1,5 @@
 import { listen } from './services/http'
+import { loadWordlist } from './services/dictionary'
 
-listen()
+loadWordlist()
+  .then(listen)
