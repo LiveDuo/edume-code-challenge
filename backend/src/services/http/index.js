@@ -4,7 +4,7 @@ import morgan from 'morgan'
 
 import { config } from '../defaults'
 
-import { router as t9Router } from '../../controllers/t9/index'
+import { router as t9Router } from '../../controllers/v1/t9'
 
 import { notFound } from '../../controllers/errors/notFound'
 
@@ -19,7 +19,7 @@ app.use(urlencoded)
 const json = express.json()
 app.use(json)
 
-app.use('/t9', t9Router)
+app.use('/v1/t9', t9Router)
 
 app.use(notFound)
 
