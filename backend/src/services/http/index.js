@@ -1,6 +1,7 @@
 import express from 'express'
 
-// import logger
+import morgan from 'morgan'
+
 import { config } from '../defaults'
 
 import { router as t9Router } from '../../controllers/t9/index'
@@ -9,16 +10,21 @@ import { notFound } from '../../controllers/errors/notFound'
 
 const app = express()
 
-const PORT = config.defaultPort || process.env.PORT
+const logger = morgan('combined')
+app.use(logger)
 
-const listen = () => app.listen(PORT, () => console.log(`Express listening on port ${PORT}`))
+const urlencoded = express.urlencoded({extended: false})
+app.use(urlencoded)
 
-// app.use(logger)
-// app.use(parser)
-// app.use(json)
+const json = express.json()
+app.use(json)
 
 app.use('/t9', t9Router)
 
 app.use(notFound)
+
+const PORT = config.defaultPort || process.env.PORT
+
+const listen = () => app.listen(PORT, () => console.log(`Express listening on port ${PORT}`))
 
 export { listen }
