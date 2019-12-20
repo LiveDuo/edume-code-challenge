@@ -1,0 +1,32 @@
+.button {
+  width: 100px;
+  background-color:#eeeeee50;
+  border: none;
+  box-shadow: 2px 2px #22222250;
+  padding: 4px;
+  border-radius: 4px;
+  margin: 4px;
+  color: inherit;
+}
+
+.button-inverted {
+  background-color: #3cac48;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.input {
+  padding: 10px 20px;
+  border: none;
+  color: inherit;
+}
+
+.numpad-container {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  border: 1px #eee solid;
+}
