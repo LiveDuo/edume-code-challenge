@@ -41,3 +41,7 @@ The react-router-dom could have been sue to demostrated further a more complete 
 ##### Security
 
 Only boilerplate security was used with helment as express middleware. Further improvements can be made to secure the backend. For example there can be a DOS attack if a relatively long input is provided to the T9 endpoint.
+
+#### T9
+
+Words that start with the current prediction but have been fully typed yet, are not currently shown. For example 27753 returns the word "apple" but 277 does not return "apple". The endpoint can be altered to work as such if required.
