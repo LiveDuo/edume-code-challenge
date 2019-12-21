@@ -6,6 +6,9 @@ const configEnvs = {
 	},
 	production: {
 		defaultPort: 4000
+	},
+	test: {
+		defaultPort: 4000
 	}
 }
 
