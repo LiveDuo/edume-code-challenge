@@ -32,4 +32,4 @@ const PORT = config.defaultPort || process.env.PORT
 
 const listen = () => app.listen(PORT, () => console.log(`Express listening on port ${PORT}`))
 
-export { listen }
+export { listen, app }
