@@ -5,10 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node build/index.js",
     "build": "babel src --out-dir build",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "test": "jest --watch --verbose"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "setupFiles": [
+      "<rootDir>/setupTests.js"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -18,11 +27,14 @@
     "@babel/node": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "eslint": "^6.7.2",
-    "nodemon": "^2.0.2"
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^3.21.2",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "node-cache": "^5.1.0"
   }
 }
